@@ -374,22 +374,428 @@ sum(nums) # inbuilt  function ,addition of  all present in list
 # %%
 nums.sort() ## sort the elements in asceding order
 
-# %%
-nums
+
+
+# %% [markdown]
+# ### TUPLE
+# - Tuple : Python Tuple is a collection of objects separated by commas. In some ways, a tuple is similar to a Python list in terms of indexing, nested objects, and repetition but the main
+# difference between both is Python tuple is immutable, unlike the Python list which is mutable.
+# Create Tuples using Round Brackets ()
+# 
 
 # %%
+t=(12,13,14,15)
+t
 
+# %%
+type(t)
+
+# %%
+t[0]=10
+
+# %%
+t.index(12)
+
+# %%
+t.count(10)
+
+# %%
+icici = (123456789, 'cizp4456u', 200000, '12th dec 2000')
+
+# %%
+icici[:2]
+
+# %%
+icici[3]
+
+# %%
+icici[3]
+
+# %%
+print(icici[3][5]) #nested indexing 
+
+# %%
+t1=(10, 20, 30, 5.6, 'nit', (1+2j), True, False, 10)
+
+# %%
+t1[1:6:2] # step=2 till index= 6, starting index =1
+
+# %%
+for i in enumerate(t1): #it will print the element along with index number 
+    print(i)
+
+# %%
+sorted(t)
 
 # %%
 
 
+# %% [markdown]
+# #### Set :
+# - A Set in Python programming is an unordered collection data type that is iterable and has no duplicate elements. While sets are mutable, meaning you can add or remove elements after their creation, the individual elements within the set must be immutable and cannot be changed directly.
+#  The major advantage of using a set, as opposed to a list, is that it has a highly optimized method for checking whether a specific element is contained in the set. This is based on  data structure known as a hash table. Since sets are unordered, we cannot access items using indexes as we do in lists.
+# 
+
+# %%
+set1={}
+# set={} dict In Python, when you write set = {}, it creates an empty dictionary, not a set. This is because {} by default is used to represent a dictionary, not a set.
+
+
+# %%
+type (set1)
+
+# %%
+empty_set = set()
+print(type(empty_set))
+
+# %%
+empty_set
+
+# %%
+# createting set by list 
+set_by_list=set([12,34,35,23,12,67])
+set_by_tuple=set((12,12,34,56,50,50,61))
+
+print(set_by_list)
+print(set_by_tuple)
+
+# %%
+s1={12,13,45,12,45,23,70}
+print(s1)
+
+# %%
+s1.add('hello')
+print(s1)
+
 # %%
 
+s2=s1.copy()
+print(s2)
 
 # %%
+s2.clear()
+print(s2)
+
+# %%
+s1.pop()
+
+# %%
+print(s1)
+
+# %%
+s1.remove(12)# it remove the element from the set it take exactly one parameter that is set element if element is not present in set then it give an errorKeyError
+
+# %%
+s1.discard('hello')
+print(s1)
+
+# %%
+s1[0] #TypeError set' object is not subscriptable 
+
+# %%
+s1.update([70,12,4,8])
+print(s1)
+
+# %%
+s1.update('welcome')
+
+# %%
+print(s1)
+# s1.update('welcome')
+# s1 {10, 3, 3.3, 5, 50, 'c', 'e', 'l', 'm', 'nit', 'o', 'w'} The update() method takes an iterable (in this case, a string) and adds its elements to the set. Since sets only contain unique items, it will add each character of the string 'welcome' as individual elements to s1
 
 
 # %%
+A = {1,2,3,4,5}
+B = {4,5,6,7,8}
+C = {9,10}
 
 
+# %%
+A.union(B)
+# The A.union(B) operation combines the elements of sets A and B into a new set, removing any duplicate values.
+# Duplicates (like 4 and 5) are included only once in the result.A | B  is similar to union method 
+
+
+
+# %%
+A.union(B,C)
+
+# %%
+A.intersection(B)
+# {4, 5} opposite union The A.intersection(B) operation returns a new set containing only the elements 
+# that are common to both sets A and B.
+
+# %%
+A.difference(B)
+# A={1, 2, 3, 4, 5} B={4,5,6,7,8}output={1,2,3}method in Python returns a new set containing all the elements 
+# that are in set A but not in set B. It is equivalent to the A - B operation.
+
+# %%
+B.issubset(A)
+# True The B1.issubset(A1) method checks if all elements of set B1 are also present in set A1. It returns True if B1 is a subset of A1, and False otherwise.
+
+# %%
+C.isdisjoint(A) # All element of A id diffrent fro set c
+
+# %%
+A.isdisjoint(B) # all element of b is not different from A set
+
+# %% [markdown]
+# ### Dictionary: 
+# - Dictionaries are used to store data values in key:value pairs. A dictionary is a collection which is ordered*, changeable and do not allow duplicates, declared as {},
+
+# %%
+d={} # this is an empty dictionary
+print(type(d))
+
+# %%
+d1=dict()# created an empty dictionary using dict constrcutor 
+
+# %%
+d1={'one':1,'tow':2,'three':3}
+
+
+# %%
+print(d1.keys())
+
+# %%
+print(d1['one'])
+
+# %%
+print(d1.values())
+
+# %%
+d1.pop('one')
+
+# %%
+for i in d1:
+    print(i)
+
+# %%
+for i in enumerate(d):
+    print(i)
+
+# %%
+# Create a dictionary that contain three dictionaries:
+my_family={
+    'child1':{
+        "name":'akhlad',
+        "email":'akhlad.contact@gmail.com'
+    },
+    'child2':{
+        "name":'asjad',
+        "email":"asjad.contact@gmail.com"
+    },
+     "child3":{
+         "name":'ashhad',
+         "email":'ashhad.contact@gmail.com'
+     }
+}
+
+# %%
+print(my_family['child1'])
+
+# %%
+print(my_family['child1']['name'])
+
+# %%
+# update the dictionary with specific key value pair
+my_family['child1']={"name":"khalid","email":"khalid.contact@gmail.com"}
+
+# %%
+print(my_family['child1'])
+
+# %%
+# help(list)
+
+# %% [markdown]
+# #### What are the different types of control statements in Python? 
+# - In Python, control statements are used to alter the flow of execution based on specific conditions or looping requirements. The main types of control statements are: 
+# - Conditional statements: if, else, elif 
+# - Looping statements: for, while
+# - Control flow statements: break, continue, pass, return
+# 
+# #### What are the two types of control statements? 
+# - The two primary types of control statements in Python are:
+# - Conditional statements: Used to execute code based on certain conditions (if, else, elif). 
+# - Looping statements: Used to execute code repeatedly until a condition is met (for, while)
+# 
+# #### Are control statements and conditional statements the same?
+# - No, control statements and conditional statements are not exactly the same.
+# - Conditional statements (if, else, elif) specifically deal with checking conditions and executing code based on whether those conditions are True or False. 
+# - Control statements encompass a broader category that includes both conditional statements (if, else, elif) and looping statements (for, while), as well as other statements 
+# (break, continue, pass, return) that control the flow of execution in a program
+# 
+
+# %% [markdown]
+# ### Python conditional Statement Explanation:
+# 
+# ##### Python If Statement :
+# - The if statement is the most simple decision-making statement. It is used to whether certain statement or block of statement will be executed or not 
+
+# %%
+##  illustrate pytho if statement
+i=9
+if i>=10:
+    print('i am inside if statement ')
+
+print('i am out side if statement')
+
+# %% [markdown]
+# #### Python If Else Statement :
+# The if statement alone tells us that if a condition is true it will execute a block of statements and if the condition is false it won’t. But if we want to do something else if the condition is false, we can use the else statement with the if statement Python to execute a block of code when the Python if condition is false
+
+# %%
+##  illustrate pytho if elif statement
+i=9
+if i>=10:
+    print('i am inside if statement ')
+else:
+    print('i am inside else statement')
+
+# %% [markdown]
+# #### Python Nested If Statement
+# - A nested if is an if statement that is the target of another if statement. Nested if statements mean an if statement inside another if statement. Yes, 
+# Python allows us to nest if statements within if statements. i.e., we can place an if statement inside another if statement.
+# 
+
+# %%
+i=10
+if i>=10:
+    print('i am in parent if statement')
+    if i>=9:
+        print('i am in child statement ')
+print('i am out side ')
+
+# %% [markdown]
+# #### Python Elif: 
+# - Here, a user can decide among multiple options. The if statements are executed from the top down. As soon as one of the conditions controlling the if is true, 
+# the statement associated with that if is executed, and the rest of the ladder is bypassed. If none of the conditions is true, then the final “else” statement will be executed
+# 
+
+# %%
+# if any condtion is Trueprogram will terminate 
+
+a=10
+if a>=11:
+    print('i am if statement ')
+elif a>=12:
+    print('i am first elif statement')
+elif a>=4:
+    print('i am second elif statement')
+
+# %% [markdown]
+# #### Ternary Statement | Short Hand:  
+# If Else Statement Whenever there is only a single statement to be executed inside the if block then shorthand  can be used. The statement can be put on the same line as the if statement
+# #### Example of Python If shorthand:
+#  In the given example, we have a condition that if the number is less than 15, then further code will be executed.
+# 
+
+# %%
+i=10
+if i<15 : print('i am less than 15')
+
+# %% [markdown]
+# #### How many else statements can a single if condition have in Python?
+# - A single if condition can have at most one else statement. However, you can have multiple elif (else if) statements to check additional conditions if needed:
+
+# %% [markdown]
+# #### LOOPS :
+# - in programing world some time we keep on repeating ,may be you want to repeat 5 statement so one way is copy & paste multiple times  or other way is.
+# if you want to print the datascience 10 times then what you will do you cant copy for 10 times , if you want to print 1000 times then you cant do manualy .
+# - type of loops --  While loop & For loop
+# 
+
+# %%
+print('data science')
+print('data science')
+print('data science')
+print('data science')
+print('data science')
+
+# %%
+i=0
+while i<=5:
+    print('data science')
+    i+=1
+
+    
+
+
+# %%
+for i in range(5):
+    print('data science')
+    i+=1
+
+# %%
+i=1
+while i<=5:
+    print('data science',':',i)
+    i+=1
+
+# %%
+# nested while Loop 
+i=1
+
+while i<=5:
+    print('data sceince',':',i)
+    i+=1
+    j=1
+    while j<=5:
+        print('technology',':',j)
+        j+=1
+        
+
+# %%
+# nested while Loop 
+i=1
+
+while i<=5:
+    print('data sceince',':',i,end=' ')
+    i+=1
+    j=1
+    while j<=5:
+        print('technology',end=',')
+        j+=1
+    print()
+   
+        
+
+# %%
+for i in range(11):
+    print(i)
+
+# %% [markdown]
+# #### For|Else in python
+# - in other language for else not supportable but in python it is supportable eg- lets print the number from 1- 20 & we dont want print number which is not divisible by 
+# - it is alongated with for loop indentation
+
+# %%
+numbers = [1, 3, 5, 7, 9]
+
+for num in numbers:
+    if num % 2 == 0:
+        print("Even number found:", num)
+        break
+else:
+    print("No even numbers found")
+
+# %%
+for i in range(5):
+    if i == 3:
+        print("Found 3!")
+        
+else:
+    print("3 not found")
+
+
+# %%
+# The else will execute because break was used.
+for i in range(5):
+    if i == 3:
+        print("Found 3!")
+        break
+else:
+    print("3 not found")
 
