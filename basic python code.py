@@ -1015,22 +1015,66 @@ print(ch)
 ch=eval(input('enter expression'))
 print(ch)
 
-# %%
 
 
-# %%
-
-
-# %%
-
+# %% [markdown]
+# ### print function 
 
 # %%
+a=20
+b=10
+a
+b # it will print last statment 
+
+# %%
+# in order to print both a and b use print function 
+a=20
+b=10
+print (a)
+print(b)
+
+# %%
+# print more than one varibale 
+print(a,b, 'akhlad')
+
+# %%
+# pritn with message
+a=10
+b=20
+add=a+b
+print('value of a is ',a,'value b is ',b,'simple string is ','akhlad') 
+print('addition of {} and {} is  {}'.format(a,b,add))
+
+
+# %% [markdown]
+# ### More short format meythod(f string method)
+# variable should be in curly braces
+# and write everything inside quots ''
+# at starting simpaly add f
+
+# %%
+num1=20
+num2=30
+num3=40
+avg=(num1+num2+num3)/3
+print(f'the avrgae of {num1} and {num2} and {num3} is {avg}')
 
 
 # %%
+# end 
+print('hello',end=' ')
+print('good morning',end=',')
+print ('how are sir ',end=',')
+print('is every thing fine')
 
+# %% [markdown]
+# # seprator
+# 1. here one print statement only we use
+# 2. insisde one print statement we have multipal values
+# 3. we want to seperate these multipal values with anything
 
 # %%
+print('hello','good','morning','this is python','programming', sep='---->')
 
 
 
