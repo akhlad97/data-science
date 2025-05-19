@@ -798,4 +798,239 @@ for i in range(5):
         break
 else:
     print("3 not found")
+    
+    
+# %% [markdown]
+# ## operator's in python
+# 
+# 
+# - ARITHMETIC OPERATOR ( + , -, *, /, %, %%, **, ^
+# - ASSIGNMEN OPERATOR (=)
+# - RELATIONAL OPERATOR
+# - LOGICAL OPERATOR
+# - UNARY OPERATOR
+
+# %% [markdown]
+# 
+
+# %% [markdown]
+# ##### Arithmetic Operator
+
+# %%
+x1,y1=10,5
+print(x1+y1)
+print(x1-y1)
+print(x1*y1)
+print(x1/y1)
+print(x1%y1)
+print(x1//y1) ### it will return value with  floating point or with out decimal value 
+print(x1**y1)
+
+
+# %% [markdown]
+# #### Assignment operators
+
+# %%
+x=2
+x=x+2
+x+=2
+print(x)
+y=2
+y=y-2
+y-=2
+print(y)
+z=2
+z=z*2
+z*=2
+print(z)
+p=12
+p=p/2
+p/=2
+print(p)
+
+q=12
+q=q//2
+q//=2
+print(q)
+
+r=6
+r=r**2
+r**=2
+print(r)
+
+
+
+
+
+# %% [markdown]
+# ## unary operator 
+# 
+# Here we are applying unary minus operator(-) on the operand n; the value of m becomes -7, which indicates it as a negative value.
+
+# %%
+n=7
+m=-(n)
+print(m)
+
+# %%
+-n
+
+# %% [markdown]
+# # Relational operator 
+# - we are using this operator for comparing
+
+# %%
+a=5
+b=7
+print(a==b)
+print(a>=b)
+print(a<=7)
+print(a>b)
+print(a<b)
+print(a!=b)
+
+
+# %% [markdown]
+# #### Logical Operators
+# - AND OR NOT
+
+# %%
+a=5
+b=7
+c=False
+print(a>b and a>=b)
+print(b>a and b>=a)
+print(a>b or a>=b)
+print(a>b or b>=a)
+print(a<b or b>=a)
+print(a>b or a<b)
+print(not c ) ## reversed the boolean value 
+
+
+# %% [markdown]
+# ## Number system coverstion (bit-binary digit)
+# binary : base (0-1) --> please divide 15/2 & count in reverse order 
+# octal : base (0-7)
+# hexadecimal : base (0-9 & then a-f)
+# when you check ipaddress you will these format --> cmd - ipconfig
+
+# %%
+## conversion from decimal to binary ,decimal octal , decimal to hexadecimal
+a=25
+print(bin(a))
+print(hex(a))
+print(oct(a))
+
+# %%
+# conversion hexa to decimal ,decimal to binary ,binary to hexa
+print(int(0b11001))
+print(int(0x19))
+print(int(0o31))
+print(hex(0b11001))
+print(oct(0x19))
+
+# %% [markdown]
+# ## BITWISE OPERATOR 
+# - WE HAVE 6 OPERATORS 
+# COMPLEMENT ( ~ ) || AND ( & )  || OR ( | ) || XOR ( ^ ) || LEFT SHIFT ( << ) || RIGHT SHIFT ( >> )
+
+# %%
+# COMPLEMENT (~) (TILDE  OR TILD)
+~12 # why we get -13 . first we understand what is complment means (reversr of binary format)
+
+# %%
+print(~-6)
+print(~-1)
+print(12&13)
+print(1&1)
+print(1|0)
+print(1&0)
+print(35&40)
+print(35|40)
+print(12 ^ 13) # in XOR if the both number are different then we will get 1 or else we will get 0
+print(1|0)
+print(1^1)
+print(0^1)
+print(0^0)
+
+
+# %%
+# BIT WISE LEFT OPERATOR
+#bit wise left operator bydefault you will take 2 zeros ( )
+#10 binary operator is 1010 | also i can say 1010
+print(10<<2)
+print(10>>2)# right shift 
+
+# %%
+### import math module 
+import math as mt 
+print(mt.sqrt(24))
+print(mt.floor(2.8))
+print(mt.ceil(2.4))
+print(mt.pi)
+print(mt.pow(3,2))
+print(mt.e)w
+
+
+# %% [markdown]
+# ### user input function in python || command line input
+
+# %%
+x=input()
+y=input()
+z=x+y
+print(z)
+
+# %% [markdown]
+# - lets take input from the user in char format, but we dont have char format in python
+
+# %%
+x2 = int(input('Enter the 1st number'))
+y2 = int(input('Enter the 2nd number'))
+z2 = x2 + y2
+z2
+
+# %%
+ch=input('enter characters')
+print(ch[0])
+print(ch[1])
+print(ch[2])
+print(ch[-1])
+print(ch[-2])
+print(ch[-0])
+
+# %%
+ch=input('enter character')[0]
+print(ch)
+
+# %%
+ch=input('enter character')[0:4]
+print(ch)
+
+# %%
+ch=input('enter expression')[:]
+print(ch)
+
+# %%
+ch=eval(input('enter expression'))
+print(ch)
+
+# %%
+
+
+# %%
+
+
+# %%
+
+
+# %%
+
+
+# %%
+
+
+# %%
+
+
 
